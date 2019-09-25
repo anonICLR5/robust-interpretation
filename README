@@ -1,0 +1,9 @@
+Code for "Certifiably Robust Interpretation in Deep Learning".
+
+Files:
+
+certification.py - certifies robustness of ImageNet images. Note that the folder ILSVRC_val must be populated with the ImageNet validation set.
+
+cifar10_experiments.py - tests empirical robustness of various interpretation methods on CIFAR10.
+
+adversarial_trainer_mnist.py - trains and evaluates models with robust interpretation, using adversarial training as described in Appendix D. Note that this file also contains code to evaluate the interpretation robustness of a model trained for robust classification, as in Section 4. The pretrained model is provided. If you wish to replicate the training of this model, use the code from Rony, et al. (2019) (https://arxiv.org/abs/1811.09600), which is public at https://github.com/jeromerony/fast_adversarial. Simply replace the MNIST model in that repository with our MNIST model (mnist/mnist_classifier.py), and run with the recommended arguments.
